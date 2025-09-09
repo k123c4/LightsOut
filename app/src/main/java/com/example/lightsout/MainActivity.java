@@ -48,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
          randomize();
 
         recolor();
+
+
+        for (int i = 0; i < grid.getChildCount(); i++) {
+            Button currButton = (Button) grid.getChildAt(i);
+            currButton.setOnClickListener(buttonlistener);
+        }
+
     }
 
     public void recolor(){
@@ -61,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             if (cellState[row][col] == true) {
                 gridButton.setBackgroundColor(getColor(R.color.dark_moss));
             } else {
-                gridButton.setBackgroundColor(getColor(R.color.olive));
+                gridButton.setBackgroundColor(getColor(R.color.light_green));
             }
         }
     }
