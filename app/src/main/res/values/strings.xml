@@ -2,5 +2,6 @@
     <string name="app_name">LightsOut</string>
     <string name="header">Lights out chau</string>
     <string name="score_0">Score 0</string>
+    <string name="randomBT">Random</string>
 
 </resources>

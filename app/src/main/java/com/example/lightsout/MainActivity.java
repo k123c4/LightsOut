@@ -12,8 +12,6 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     public static final int GRID_SIZE = 3;
-    private GridLayout grid;
-    private boolean cellState [][];
     View.OnClickListener buttonlistener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -36,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
             recolor();
         }
     };
+    private GridLayout grid;
+    private boolean cellState [][];
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +48,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         grid = findViewById(R.id.light_grid);
 
-         randomize();
+        setContentView(R.layout.activity_main);
 
-        recolor();
+
+        Button randomizeButton = findViewById(R.id.RandBT);
+        randomizeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                randomize();
+                recolor();
+            }
+        });
 
 
         for (int i = 0; i < grid.getChildCount(); i++) {
@@ -81,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-
-
 }
+
+
