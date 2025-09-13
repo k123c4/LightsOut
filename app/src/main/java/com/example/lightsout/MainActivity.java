@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         grid = findViewById(R.id.light_grid);
 
-        setContentView(R.layout.activity_main);
 
 
         Button randomizeButton = findViewById(R.id.RandBT);
@@ -65,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             Button currButton = (Button) grid.getChildAt(i);
             currButton.setOnClickListener(buttonlistener);
         }
-
+        recolor();
     }
 
     public void recolor(){
